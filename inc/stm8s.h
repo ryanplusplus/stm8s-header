@@ -223,6 +223,15 @@ typedef unsigned char     uint8_t;
 typedef unsigned short    uint16_t;
 typedef unsigned long     uint32_t;
 
+/*!< STM8 Standard Peripheral Library old types (maintained for legacy purpose) */
+
+typedef enum {RESET = 0, SET = !RESET} FlagStatus, ITStatus, BitStatus, BitAction;
+
+typedef enum {DISABLE = 0, ENABLE = !DISABLE} FunctionalState;
+#define IS_FUNCTIONALSTATE_OK(STATE) (((STATE) == DISABLE) || ((STATE) == ENABLE))
+
+typedef enum {ERROR = 0, SUCCESS = !ERROR} ErrorStatus;
+
 /**
   * @}
   */
